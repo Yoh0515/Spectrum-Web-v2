@@ -10,18 +10,18 @@
 <body>
     <header id="header">
         <nav>
-            <a href="#header"><img src="./img/logo1.jfif"></a>
+            <a href="#header"><img src="./img/logo.png"></a>
             <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <i class="fa-solid fa-xmark" onclick="hideMenu()" style="display: none;"></i>
                 <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#poject">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a id="homeLink" href="#header">Home</a></li>
+                    <li><a id="aboutLink" href="#about">About</a></li>
+                    <li><a id="servicesLink" href="#services">Services</a></li>
+                    <li><a id="projectLink" href="#poject">Gallery</a></li>
+                    <li><a id="contactLink" href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            <i class="fa-solid fa-bars" onclick="showMenu()" style="display: none;"></i>
         </nav>
         <video autoplay muted loop id="myVideo">
             <source src="./video/paris.mp4" type="video/mp4">
@@ -29,12 +29,25 @@
         <div class="content">
             <h1>Time for your <br> <span>next adventure</span></h1>
             <h2>Let us plan it for you</h2>
-            <button>START PLANNING YOUR TRIP</button>
+            <button><a href="#contact">START PLANNING YOUR TRIP</a></button>
         </div>
     </header>
     <section id="about">
         <div class="about-con">
             <h1 class="title-page">About Us</h1>
+            <div class="col-2">
+                <h2>Why Choose Us?</h2>
+                <div class="col-2_con">
+                    <h3>Expert Advice and Destination Knowledge</h3>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <h3>Time saving and convenience</h3>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <h3>Exclusive Deals</h3>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <h3>Personalized Service, Support and Assistance</h3>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                </div>
+            </div>
             <div class="con-1">
                 <h1>About our company</h1>
                 <p>Established in March 2002, Spectrum Travel and Tours, Inc. (STTI) boasts of its extensive experience in Corporate Travel Management. We are a full service IATA-accredited travel & tour company, facilitating International & Domestic Ticketing, MICE & FIT Travel and Local Tour requirements for our corporate clientele. STTI has the network of global tour partners, international hotels and resorts, with committed and experienced local travel consultants</p>
@@ -48,38 +61,31 @@
                 <h1>our value</h1>
                 <p>Commitment to achieve a high level of service with ethical customer management.</p>
             </div>
-            <div class="col-2">
-                <h1>Why Choose Us?</h1>
-                <div class="col-2_con">
-                    <h3>Expert Advice and Destination Knowledge</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
-                    <h3>Time saving and convenience</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
-                    <h3>Exclusive Deals</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
-                    <h3>Personalized Service, Support and Assistance</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
-                </div>
-            </div>
         </div>
     </section>
     <section id="services">
         <h1 class="title-page">Our Services</h1>
-        <h1 class="title-page">WE OFFER THE FOLLOWING SERVICES</h1>
-        <div class="ul1">
-            <li><a href="#">International and Domestic Flight Reservations and Ticketing</a></li>
-            <li><a href="#">International and Domestic Hotel Reservations</a></li>
-            <li><a href="#">Meetings, Incentives, Conferences and Exhibitions (MICE) Planning</a></li>
-            <li><a href="#">Package Tours</a></li>
-            <li><a href="#">Bookings with Cruise Lines</a></li>
-            <li><a href="#">Other Immigration and Documentation Requirements</a></li>
-            <li><a href="#">Car / Transportation Rental</a></li>
-            <li><a href="#">Travel Advisories</a></li>
-            <li><a href="#">Worldwide Meet and Greet Assistance</a></li>
-            <li><a href="#">Worldwide Airport Transfer Service</a></li>
-            <li><a href="#">Travel Insurance</a></li>
-            <li><a href="#">Emergency Services Relating to Travel</a></li>
+        <h2>WE OFFER THE FOLLOWING SERVICES</h2>
+        <div class="services-con">
+            <div class="ul1">
+                <li><a href="#">International and Domestic Flight Reservations and Ticketing</a></li>
+                <li><a href="#">International and Domestic Hotel Reservations</a></li>
+                <li><a href="#">Meetings, Incentives, Conferences and Exhibitions (MICE) Planning</a></li>
+                <li><a href="#">Package Tours</a></li>
+                <li><a href="#">Bookings with Cruise Lines</a></li>
+                <li><a href="#">Other Immigration and Documentation Requirements</a></li>
+                <li><a href="#">Car / Transportation Rental</a></li>
+                <li><a href="#">Travel Advisories</a></li>
+                <li><a href="#">Worldwide Meet and Greet Assistance</a></li>
+                <li><a href="#">Worldwide Airport Transfer Service</a></li>
+                <li><a href="#">Travel Insurance</a></li>
+                <li><a href="#">Emergency Services Relating to Travel</a></li>
+            </div>
         </div>
     </section>
+    <script>
+        document.getElementById
+    </script>
+
 </body>
 </html>

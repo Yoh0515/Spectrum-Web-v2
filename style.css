@@ -32,11 +32,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    background-color: rgba(230, 224, 224, 0.075);
-}
-
-.fa-solid {
-    display: none;
+    background-color: rgba(230, 224, 224, 0.466);
 }
 
 nav img {
@@ -54,7 +50,6 @@ nav img {
     text-decoration: none;
     font-size: 20px;
     color: #fff;
-    font-weight: 800;
 }
 
 .nav-links ul li::after {
@@ -116,6 +111,12 @@ nav img {
     border: none;
 }
 
+.content button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
 .content button:hover {
     background-color: rgb(250, 110, 0);
     border: none;
@@ -131,11 +132,11 @@ nav img {
 .title-page {
     font-size: 40px;
     color: #CC0101;
-    text-align: start;
+    text-align: center;
 }
 
 .con-1 {
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .con-1 h1{
@@ -151,7 +152,9 @@ nav img {
 
 .col-2 {
     text-align: start;
-    margin-top: 80px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .col-2 h1 {
@@ -161,11 +164,17 @@ nav img {
 }
 
 .col-2_con {
-    margin: 10px 0 0 50px;
+    margin: 10px 0 0 90px;
+}
+
+.col-2 h2{
+    font-size: 30px;
+    text-align: start;
+    margin: 10px 0 0 90px;
 }
 
 .col-2_con h3{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .col-2_con li{
@@ -177,20 +186,27 @@ nav img {
 
 #services {
     padding: 50px 100px;
-    align-items: center;
     justify-content: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 40px;
+}
+
+#services h1,h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-con{
+    align-items: center;
 }
 
 .ul1 {
     display: flex;
     flex-direction: column;
-    text-align: start;
-    margin-left: 50px;
-    margin-top: 30px;
     font-size: 20px;
+    margin-top: 30px;
     gap: 10px;
 }
 
