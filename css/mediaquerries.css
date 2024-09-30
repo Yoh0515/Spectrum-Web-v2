@@ -88,6 +88,30 @@
     .gallery-con h1{
         text-align: center;
     }
+
+    /* ==== Footer ===== */
+    .footer {
+        margin-top: 200px;
+    }
+    .con-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .con-footer2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .con-footer2 span {
+      display: none;
+    }
+  
+    .support1{
+      text-align: center;
+    }
  }
 
 
