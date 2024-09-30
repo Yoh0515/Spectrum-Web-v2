@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPECTRUM TRAVEL & TOURS INC.</title>
     <link rel="icon" type="image/x-icon" href="./img/logo1.jfifgit ">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mediaquerries.css">
     <script src="https://kit.fontawesome.com/4a73983de5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,16 +14,16 @@
         <nav>
             <a href="#header"><img src="./img/logo.png"></a>
             <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa-xmark" onclick="hideMenu()" style="display: none;"></i>
-                <ul>
-                    <li><a id="homeLink" href="#header">Home</a></li>
-                    <li><a id="aboutLink" href="#about">About</a></li>
-                    <li><a id="servicesLink" href="#services">Services</a></li>
-                    <li><a id="projectLink" href="#poject">Gallery</a></li>
-                    <li><a id="contactLink" href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul id="ulLink">
+                    <li class="ulLink"><a href="#header">Home</a></li>
+                    <li class="ulLink"><a href="#about">About</a></li>
+                    <li class="ulLink"><a href="#services">Services</a></li>
+                    <li class="ulLink"><a href="#gallery">Gallery</a></li>
+                    <li class="ulLink"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()" style="display: none;"></i>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
         <video autoplay muted loop id="myVideo">
             <source src="./video/paris.mp4" type="video/mp4">
@@ -84,9 +85,85 @@
             </div>
         </div>
     </section>
+    <section id="gallery">
+        <div class="gallery-con">
+            <h1 class="title-page">Gallery</h1>
+            <h1>Your Next Adventure Awaits!</h1>
+            <p>"Discover unique destinations and curated travel experience"</p>
+            <div class="gallery-deal">
+                <div class="deal">
+                    <img src="./img/domestic.jfif">
+                    <button>Domestic</button>
+                </div>
+                <div class="deal">
+                    <img src="./img/asia.jfif">
+                    <button>ASIA</button>
+                </div>
+                <div class="deal">
+                    <img src="./img/europe.jpg">
+                    <button>Europe</button>
+                </div>
+                <div class="deal">
+                    <img src="./img/usa.jpg">
+                    <button>Usa</button>
+                </div>
+                <div class="deal">
+                    <img src="./img/oceania.jpg">
+                    <button>Oceania</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="con-footer">
+            <div class="social2_wrapper">
+                <h2>Social Account</h2>
+                <ul class="social2">
+                    <li class="nav1"><a href="https://www.facebook.com/Spectrum-Travel-Tours-Inc-1241520189328501/" target="_blank"></a></li>
+                    <li class="nav3"><a href="https://www.instagram.com/spectrumtraveltours/" target="_blank"></a></li>
+                </ul>
+            </div>
+            <div class="sched">
+                <div class="support1">
+                    Business Hours: Mondays to Thursdays - <br> 
+                    8:00 A.M. to 5:30 P.M.  <br>
+                    Fridays -  8:00 A.M. to 5:00 P.M.<br>
+                    Saturdays - 8:00 A.M. to 12:00 P.M.<br> 
+                    inquire@spectrumtraveltours.com.ph <br>
+                </div>
+            </div>
+        </div>
+        <div class="con-footer2">
+          Copyright © 2024 <strong>Spectrum Travel & Tours Inc.</strong> <span> | </span> <a href="#">Privacy Policy</a> <span> | </span>
+          <a href="#about">About Us</a>    
+        </div>
+    </footer>
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
     <script>
-        document.getElementById
-    </script>
+        let navLinks = document.getElementById('navLinks');
+        let gotopbtn = document.querySelector('.gotopbtn');
 
+        function showMenu (){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu (){
+            navLinks.style.right = "-600px";
+        }
+
+        const ulLink = document.getElementById('ulLink');
+        ulLink.addEventListener('click', function() {
+            navLinks.style.right = "-600px";
+        });
+
+        window.onscroll = function () {
+        if (window.scrollY > document.getElementById('header').offsetHeight) {
+            gotopbtn.classList.add('show');
+        } else {
+            gotopbtn.classList.remove('show');
+        }
+    };
+
+    </script>
 </body>
 </html>
