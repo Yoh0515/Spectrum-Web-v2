@@ -61,7 +61,7 @@ function sendMessage() {
             icon: "success",
             text: `Thank you, '${params['sendername']}'! Your message has been sent.`,
             showConfirmButton: false,
-            timer: 1500
+            timer: 2500
         });
 
         // Clear form fields
