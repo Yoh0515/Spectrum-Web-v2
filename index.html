@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mediaquerries.css">
     <script src="https://kit.fontawesome.com/4a73983de5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
     <header id="header">
@@ -17,7 +20,7 @@
                 <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul id="ulLink">
                     <li class="ulLink"><a href="#header">Home</a></li>
-                    <li class="ulLink"><a href="#about">About</a></li>
+                    <li class="ulLink"><a href="#about">About Us</a></li>
                     <li class="ulLink"><a href="#services">Services</a></li>
                     <li class="ulLink"><a href="#gallery">Gallery</a></li>
                     <li class="ulLink"><a href="#contact">Contact</a></li>
@@ -41,13 +44,13 @@
                 <h2>Why Choose Us?</h2>
                 <div class="col-2_con">
                     <h3>Expert Advice and Destination Knowledge</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <li>Our Travel Consultants have deep knowledge and expertise in specific destinations and can help you provide tailored recommendations based on firsthand experience.</li>
                     <h3>Time saving and convenience</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <li>Planning your trip should be an enjoyable process, Let our travel consultants assist you in all aspects of trip planning from flight bookings, hotel accommodations, transfers, tours and other arrangements providing you selection of the best options based on your trip preferences, making the booking process seamless - saving you time, energy and stress of organizing by yourself.</li>
                     <h3>Exclusive Deals</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <li>Our global partnership with Airlines, Hotels, Destination Management Company and Tour Operators help us build travel packages utilizing their exclusive deals, discounts and promotions providing you unique and memorable experience with cost-effective travel options.</li>
                     <h3>Personalized Service, Support and Assistance</h3>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus animi laboriosam illo commodi eius repudiandae soluta repellendus deserunt. Minima, magnam.</li>
+                    <li>Our Travel consultants can curate personalized itineraries based on your needs, interests, budget and can accommodate special requests on specific preferences such as dietary requirements and other ancillary services We are here to get you there-providing you support throughout the duration of your trip especially if something goes wrong such as flight delays, cancellation or any emergency and ensures a stress-free and enjoyable travel experience.</li>
                 </div>
             </div>
             <div class="con-1">
@@ -65,6 +68,7 @@
             </div>
         </div>
     </section>
+    <div class="line"></div>
     <section id="services">
         <h1 class="title-page">Our Services</h1>
         <h2>WE OFFER THE FOLLOWING SERVICES</h2>
@@ -85,6 +89,7 @@
             </div>
         </div>
     </section>
+    <div class="line"></div>
     <section id="gallery">
         <div class="gallery-con">
             <h1 class="title-page">Gallery</h1>
@@ -92,24 +97,126 @@
             <p>"Discover unique destinations and curated travel experience"</p>
             <div class="gallery-deal">
                 <div class="deal">
-                    <img src="./img/domestic.jfif">
-                    <button>Domestic</button>
+                    <img class="open-modalbyImg" src="./img/domestic.jfif">
+                    <button class="open-modal-btn">Domestic</button>
                 </div>
                 <div class="deal">
-                    <img src="./img/asia.jfif">
-                    <button>ASIA</button>
+                    <img class="open-modalbyImg" src="./img/asia.jfif">
+                    <button class="open-modal-btn">ASIA</button>
                 </div>
                 <div class="deal">
-                    <img src="./img/europe.jpg">
-                    <button>Europe</button>
+                    <img class="open-modalbyImg" src="./img/europe.jpg">
+                    <button class="open-modal-btn">Europe</button>
                 </div>
                 <div class="deal">
-                    <img src="./img/usa.jpg">
-                    <button>Usa</button>
+                    <img class="open-modalbyImg" src="./img/usa.jpg">
+                    <button class="open-modal-btn">Usa</button>
                 </div>
                 <div class="deal">
-                    <img src="./img/oceania.jpg">
-                    <button>Oceania</button>
+                    <img class="open-modalbyImg" src="./img/oceania.jpg">
+                    <button class="open-modal-btn">Oceania</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <div class="modal-con">
+                    <img id="modal-img" src="" alt="Selected Destination">
+                    <div class="col-1">
+                        <h3>From <span id="modal-title">Title</span> to destination</h3>
+                        <h3>A Journey through Fashion, Art, and Culture</h3>
+                        <p>Emabark on a remarkable journey from <span id="modal-title-dynamic">Title</span>' romantic streets to destination stylish avenues. Discover the best of France and Italy on seamless journey that inspires you. Book now and let us turn your dream European adventure into reality.</p>
+                        <h3>Travel Date: Feb 12-23,2025/Mar 17-28,2025</h3>
+                        <h3>Rate Starts at $ 2,888/person</h3>
+                        <button><a href="#contact">Start Planning</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="line"></div>
+    <section id="contact">
+        <h1 class="title-page">Contact Form</h1>
+        <p class="c-p">Be inspired by our great travel packages and offers, Contact our travel Consultant <br> for inspirations, advice or get quote.</p>
+        <div class="contact-con">
+            <div class="contact">
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="return sendMessage();">
+                        <div class="form-group">
+                            <label for="fname">First Name<span>*</span></label>
+                            <input type="text" id="fname" required>
+                            <span class="error-message" id="fname-error">First name is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name<span>*</span></label>
+                            <input type="text" id="lname" required>
+                            <span class="error-message" id="lname-error">Last name is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email<span>*</span></label>
+                            <input type="email" id="email" required>
+                            <span class="error-message" id="email-error">Email is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Preferred Destination<span>*</span></label>
+                            <input type="text" id="destination" required>
+                            <span class="error-message" id="destination-error">Destination is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Your exact Travel Dates<span>*</span></label>
+                            <input type="date" id="date" required>
+                            <span class="error-message" id="date-error">Date is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="num_people">Number of People Travelling<span>*</span></label>
+                            <input type="number" id="num_people" required>
+                            <span class="error-message" id="num_people-error">Number of people is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropdown">How do you know Spectrum Travel and Tours Inc.<span>*</span></label>
+                            <div class="custom-select">
+                                <select type="text" id="dropdown" required>
+                                    <option value="">-Select Option-</option>
+                                    <option value="Website">Website</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Walk in Client">Walk in Client</option>
+                                    <option value="Referred by a Friend">Referred by a Friend</option>
+                                    <option value="Email Newsletter">Email Newsletter</option>
+                                </select>
+                                <span class="error-message" id="dropdown-error">Selection is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="remarks">Remarks<span>*</span></label>
+                            <textarea type="text" id="remarks"></textarea>
+                            <span class="error-message" id="remarks-error">Remarks are required.</span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="map">
+                <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.4671802537887!2d121.0540684654933!3d14.572434862880902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c97d52813eb9%3A0x61ef9700cd3e5424!2sspectrum+travel%26tours!5e0!3m2!1sen!2sph!4v1553731994708" width="600" height="300" frameborder="0" style="border:0" allowfullscreen>
+                </iframe>
+                <div class="address">
+                    <div class="address-con">
+                        <h4>ADDRESS</h4>
+                        <p>132 Pioneer St., Highway Hills Mandaluyong City</p>
+                        <h4>PHONE</h4>
+                        <p>+632 (02) 8637 12 94<br></p>
+                        <h4>EMAIL</h4>
+                        <p>
+                            <a href="#">inquire@spectrumtraveltours.com.ph</a>
+                        </p>
+                        <Br/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,7 +241,7 @@
             </div>
         </div>
         <div class="con-footer2">
-          Copyright © 2024 <strong>Spectrum Travel & Tours Inc.</strong> <span> | </span> <a href="#">Privacy Policy</a> <span> | </span>
+          Copyright © 2024 <strong>Spectrum Travel & Tours Inc.</strong> <span> | </span> <a href="">Privacy Policy</a> <span> | </span>
           <a href="#about">About Us</a>    
         </div>
     </footer>
@@ -165,5 +272,62 @@
     };
 
     </script>
+
+    <script>
+        const imgGallery = document.querySelectorAll('.open-modalbyImg');
+        const buttons = document.querySelectorAll('.open-modal-btn');
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalTitleDynamic = document.getElementById('modal-title-dynamic');
+        const modalImg = document.getElementById('modal-img');
+        const closeModalBtn = document.querySelector('.close-btn');
+        const startPlanningBtn = document.querySelector('#modal .col-1 button');
+
+        // Function to open the modal and set its content
+        const openModal = (dealDiv) => {
+            const buttonText = dealDiv.querySelector('.open-modal-btn').textContent; // Get button text
+            const imgSrc = dealDiv.querySelector('img').src; // Get the image source
+
+            modalTitle.textContent = buttonText; // Set modal title
+            modalTitleDynamic.textContent = buttonText; // Set dynamic span text
+            modalImg.src = imgSrc; // Set modal image
+
+            modal.style.display = 'flex'; // Show modal
+        };
+
+        // Add click event listeners to buttons to open the modal
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const dealDiv = this.parentElement; // Get the parent 'deal' div
+                openModal(dealDiv); // Open modal with this deal's content
+            });
+        });
+
+        // Add click event listeners to images to open the modal
+        imgGallery.forEach(image => {
+            image.addEventListener('click', function() {
+                const dealDiv = this.parentElement; // Get the parent 'deal' div
+                openModal(dealDiv); // Open modal with this deal's content
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeModalBtn.addEventListener('click', function() {
+            modal.style.display = 'none'; // Hide modal
+        });
+
+        startPlanningBtn.addEventListener('click', function() {
+            modal.style.display = 'none'; // Hide modal
+        });
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none'; // Hide modal if clicked outside
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -89,6 +89,41 @@
         text-align: center;
     }
 
+    
+    /* ==== Gallery ===== */
+
+    .modal-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .close-btn {
+        padding: 10px 10px;
+    }
+
+    .col-1 button {
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    /* ==== Contact ===== */
+
+    .contact-con {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map {
+    width: 300px;
+    }
+  
+    .map iframe {
+        width: 300px;
+        height: 370px;
+    }
+
+
     /* ==== Footer ===== */
     .footer {
         margin-top: 200px;
@@ -156,6 +191,49 @@
         display: flex;
         flex-direction: column;
     }
+
+    /* ==== Gallery ===== */
+
+    .modal-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .close-btn {
+        padding: 10px 10px;
+    }
+
+    .col-1 button {
+        display: block;
+        margin: 20px auto 0;
+    }
+
+
+    /* ==== Contact ===== */
+
+    .contact-con {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    #contact {
+        align-items: center;
+    }
+  
+    .map iframe {
+        width: 300px;
+        height: 370px;
+    }
+
+
  }
 
 
@@ -199,6 +277,50 @@
         font-size: 25px;
         display: flex;
         flex-direction: column;
+    }
+
+    /* ==== Gallery ===== */
+
+    .modal-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .close-btn {
+        padding: 10px 10px;
+    }
+
+    
+
+    .col-1 button {
+        display: block;
+        margin: 20px auto 0;
+    }
+
+
+    /* ==== Contact ===== */
+
+    .contact-con {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    #contact {
+        align-items: center;
+    }
+  
+    .map iframe {
+        width: 300px;
+        height: 370px;
     }
  }
 

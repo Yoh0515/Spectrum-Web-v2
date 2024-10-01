@@ -6,6 +6,12 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+}
+
+.line{
+    background-color: #CC0101;
+    padding-top: 1px;
 }
 
 #header{
@@ -189,7 +195,7 @@ nav .fa-solid {
 /* ---------- Services -------- */
 
 #services {
-    padding: 50px 100px;
+    padding: 50px 100px 0 100px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -280,12 +286,103 @@ nav .fa-solid {
     width: 320px;
 }
 
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    align-items: center;
+    animation: 0.4s ease-out zoomIn;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+              transform: scale3d(.3, .3, .3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 200px;
+    max-width: 700px;
+}
+
+.modal-con {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.col-1 span{
+    color: #000;
+}
+
+.col-1 button {
+    background-color: rgb(247, 119, 0);
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    width: fit-content;
+    padding: 5px 30px;
+}
+
+.col-1 button a{
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    width: fit-content;
+    text-decoration: none;
+    padding: 5px 30px;
+}
+
+.modal-content h3{
+    font-size: 16px;
+}
+
+.modal-content img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #CC0101;
+    border: none;
+    padding: 3px 10px;
+    background: none;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: end;
+}
+
 
 /* Footer */
 footer {
     background-color: #CC0101;
     padding-top: 1px;
-    width: 100vw;
+    width: 100%;
 }
   
 .con-footer {
@@ -294,7 +391,6 @@ footer {
       justify-content: space-around;
       background-color: #fff;
       padding: 18px;
-      width: 100%;  
  }
   
 .support1 {
@@ -386,6 +482,204 @@ span {
     color: #E2DFD0;
 }
 
+/* --------- Contact --------- */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 40px 40px;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.c-p {
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    padding: -10px;
+}
+
+.contact-con {
+    display: flex;
+    justify-content: space-around;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.map iframe {
+    width: 500px;
+    height: 400px;
+}
+
+
+/* Address */
+.address {
+    display: flex;
+}
+
+.address-con h4 {
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CC0101;
+}
+
+.address-con p{
+    padding-left: 25px;
+}
+
+.address-con p a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* Contact Form */
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    gap: 5px;
+}
+
+.contact-form h1 {
+    text-align: center;
+    padding-top: 0;
+    margin-top: 0;
+    color: #CC0101;
+}
+
+.form-group label {
+    font-size: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-group input, select, textarea{
+    border: 1px solid lightgray;
+    appearance: none;
+}
+
+select[type=text],
+textarea[type=text],
+input[type=text],
+input[type=date],
+input[type=number],
+input[type=email] {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+select[type=text]:focus,
+textarea[type=text]:focus,
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=number]:focus,
+input[type=email]:focus {
+    border: 1px solid lightgray;
+}
+
+.form-group label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #3C3D37;
+}
+
+.form-group label span {
+    color: red;
+}
+
+textarea {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.form-group button {
+    width: fit-content;
+    padding: 10px 40px;
+    color: #fff;
+    background-color: #CC0101;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 0;
+    font-size: 15px;
+}
+
+.custom-select {
+    border-radius: 5px;
+}
+
+.custom-select select {
+    appearance: none;
+    width: 100%;
+    height: 35px;
+    font-size: 12px;
+    padding-left: 15px;
+    color: #3C3D37;
+    cursor: pointer;
+  }
+  
+  .custom-select::before,
+  .custom-select::after {
+    --size: 0.3rem;
+    content: "";
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+  }
+  
+  .custom-select::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid black;
+    top: 40%;
+  }
+  
+  .custom-select::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 55%;
+  }
+
+  
+/* General error message styling */
+.error-message {
+    color: red;
+    display: none; /* Hide error messages by default */
+    font-size: 0.875em;
+    margin-top: 4px;
+}
+
+/* Styling for fields with errors */
+.error {
+    border: 1px solid red;
+}
+
+
 .gotopbtn {
     position: fixed;
     display: none;
@@ -399,11 +693,6 @@ span {
     line-height: 50px;
     color: #fff;
     font-size: 22px;
-    opacity: 80%;
-}
-
-.gotopbt:hover {
-    opacity: 100%;
 }
 
 .gotopbtn.show {
