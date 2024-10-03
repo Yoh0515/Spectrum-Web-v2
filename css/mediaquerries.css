@@ -55,9 +55,26 @@
 
     /* -----About ------ */
 
+    .about-con {
+        padding: 40px 50px 0 50px;
+        text-align: center;
+    }
+
+    .con-1 .our-com {
+        width: 350px;
+    }
+
     .con-1 {
         display: flex;
         flex-wrap: wrap;
+        margin: 20px;
+    }
+
+    .con-1 .our-com img{
+        height: 150px;
+        width: 150px;
+        border-radius: 5px;
+        margin-bottom: 20px;
     }
 
     .bg h2 {
@@ -70,9 +87,13 @@
         width: 400px;
     }
 
-    .o-mission, .o-vission, .o-value {
-        width: 300px;
+    .our-all .o-mission, .our-all .o-vission, .our-all .o-value {
+        width: 270px;
+        padding: 10px 15px;
     }
+
+
+
 
     .col-2_con {
         margin: 0;
