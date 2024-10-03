@@ -16,7 +16,7 @@
     <header id="header">
         <nav>
             <a href="#header"><img src="./img/logo.png"></a>
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links hidden" id="navLinks">
                 <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul id="ulLink">
                     <li class="ulLink"><a href="#header">Home</a></li>
@@ -31,49 +31,78 @@
         <video autoplay muted loop id="myVideo">
             <source src="./video/paris.mp4" type="video/mp4">
         </video>
-        <div class="content">
-            <h1>Time for your <br> <span>next adventure</span></h1>
-            <h2>Let us plan it for you</h2>
-            <button><a href="#contact">START PLANNING YOUR TRIP</a></button>
+        <div class="content hidden">
+            <h1 class="hidden">Time for your <br> <span>next adventure</span></h1>
+            <h2 class="hidden">Let us plan it for you</h2>
+            <button><a class="hidden" href="#contact">START PLANNING YOUR TRIP</a></button>
         </div>
     </header>
-    <section id="about">
-        <div class="about-con">
-            <h1 class="title-page">About Us</h1>
-            <div class="col-2">
-                <h2>Why Choose Us?</h2>
-                <div class="col-2_con">
-                    <h3>Expert Advice and Destination Knowledge</h3>
-                    <li>Our Travel Consultants have deep knowledge and expertise in specific destinations and can help you provide tailored recommendations based on firsthand experience.</li>
-                    <h3>Time saving and convenience</h3>
-                    <li>Planning your trip should be an enjoyable process, Let our travel consultants assist you in all aspects of trip planning from flight bookings, hotel accommodations, transfers, tours and other arrangements providing you selection of the best options based on your trip preferences, making the booking process seamless - saving you time, energy and stress of organizing by yourself.</li>
-                    <h3>Exclusive Deals</h3>
-                    <li>Our global partnership with Airlines, Hotels, Destination Management Company and Tour Operators help us build travel packages utilizing their exclusive deals, discounts and promotions providing you unique and memorable experience with cost-effective travel options.</li>
-                    <h3>Personalized Service, Support and Assistance</h3>
-                    <li>Our Travel consultants can curate personalized itineraries based on your needs, interests, budget and can accommodate special requests on specific preferences such as dietary requirements and other ancillary services We are here to get you there-providing you support throughout the duration of your trip especially if something goes wrong such as flight delays, cancellation or any emergency and ensures a stress-free and enjoyable travel experience.</li>
+    <div class="col-2">
+        <div class="bg">
+            <h2 class="title-page hidden">Why Choose Us?</h2>
+            <div class="col-2_con">
+                <div class="why-div hidden">
+                    <img class="oneImg" src="./img/expert_advice.png">
+                    <div class="why-con">
+                        <h3>Expert Advice and Destination Knowledge</h3>
+                        <p>Our Travel Consultants have deep knowledge and expertise in specific destinations and can help you provide tailored recommendations based on firsthand experience.</p>
+                    </div>
+                </div>
+                <div class="why-div hidden">
+                    <img class="twoImg"  src="./img/time_saving.png">
+                    <div class="why-con">
+                        <h3>Time saving and convenience</h3>
+                        <p>Planning your trip should be an enjoyable process, Let our travel consultants assist you in all aspects of trip planning from flight bookings, hotel accommodations, transfers, tours and other arrangements providing you selection of the best options based on your trip preferences, making the booking process seamless - saving you time, energy and stress of organizing by yourself.</p>
+                    </div>
+                </div>
+                <div class="why-div hidden">
+                    <img class="twoImg"  src="./img/exclusive_deal.png">
+                    <div class="why-con">
+                        <h3>Exclusive Deals</h3>
+                        <p>Our global partnership with Airlines, Hotels, Destination Management Company and Tour Operators help us build travel packages utilizing their exclusive deals, discounts and promotions providing you unique and memorable experience with cost-effective travel options.</p>
+                    </div>
+                </div>
+                <div class="why-div hidden">
+                    <img class="oneImg" src="./img/personalize_service.png">
+                    <div class="why-con">
+                        <h3>Personalized Service, Support and Assistance</h3>
+                        <p>Our Travel consultants can curate personalized itineraries based on your needs, interests, budget and can accommodate special requests on specific preferences such as dietary requirements and other ancillary services We are here to get you there-providing you support throughout the duration of your trip especially if something goes wrong such as flight delays, cancellation or any emergency and ensures a stress-free and enjoyable travel experience.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <section id="about">
+        <div class="about-con">
+            <h1 class="title-page hidden">About Us</h1>
             <div class="con-1">
-                <h1>About our company</h1>
-                <p>Established in March 2002, Spectrum Travel and Tours, Inc. (STTI) boasts of its extensive experience in Corporate Travel Management. We are a full service IATA-accredited travel & tour company, facilitating International & Domestic Ticketing, MICE & FIT Travel and Local Tour requirements for our corporate clientele. STTI has the network of global tour partners, international hotels and resorts, with committed and experienced local travel consultants</p>
-
-                <h1>our mission</h1>
-                <p>To be the leading travel management company in the industry providing quality service with premium value to its customers.</p>
-
-                <h1>our vision</h1>
-                <p>Be the trusted travel partner to our discerning customers, dedicated to provide efficient and reliable service</p>
-
-                <h1>our value</h1>
-                <p>Commitment to achieve a high level of service with ethical customer management.</p>
+                <div class="our-com hidden">
+                    <h1>About our company</h1>
+                    <img src="./img/logo1.jfif">
+                    <p>Established in March 2002, Spectrum Travel and Tours, Inc. (STTI) boasts of its extensive experience in Corporate Travel Management. We are a full service IATA-accredited travel & tour company, facilitating International & Domestic Ticketing, MICE & FIT Travel and Local Tour requirements for our corporate clientele. STTI has the network of global tour partners, international hotels and resorts, with committed and experienced local travel consultants</p>
+                </div>
+                <div class="our-all">
+                    <div class="o-mission hidden">
+                        <h1>our mission</h1>
+                        <p>To be the leading travel management company in the industry providing quality service with premium value to its customers.</p></div>
+                    <div class="o-vission hidden">
+                        <h1>our vision</h1>
+                        <p>Be the trusted travel partner to our discerning customers, dedicated to provide efficient and reliable service</p></div>
+                    <div class="o-value hidden">
+                        <h1>our value</h1>
+                        <p>Commitment to achieve a high level of service with ethical customer management.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <div class="line"></div>
     <section id="services">
-        <h1 class="title-page">Our Services</h1>
-        <h2>WE OFFER THE FOLLOWING SERVICES</h2>
+        <h1 class="title-page hidden">Our Services</h1>
+        <h2 hidden>WE OFFER THE FOLLOWING SERVICES</h2>
         <div class="services-con">
-            <div class="ul1">
+            <div class="ul1 hidden">
                 <li><a href="#">International and Domestic Flight Reservations and Ticketing</a></li>
                 <li><a href="#">International and Domestic Hotel Reservations</a></li>
                 <li><a href="#">Meetings, Incentives, Conferences and Exhibitions (MICE) Planning</a></li>
@@ -92,27 +121,27 @@
     <div class="line"></div>
     <section id="gallery">
         <div class="gallery-con">
-            <h1 class="title-page">Gallery</h1>
+            <h1 class="title-page hidden">Gallery</h1>
             <h1>Your Next Adventure Awaits!</h1>
             <p>"Discover unique destinations and curated travel experience"</p>
             <div class="gallery-deal">
-                <div class="deal">
+                <div class="deal hidden">
                     <img class="open-modalbyImg" src="./img/domestic.jfif">
                     <button class="open-modal-btn">Domestic</button>
                 </div>
-                <div class="deal">
+                <div class="deal hidden">
                     <img class="open-modalbyImg" src="./img/asia.jfif">
                     <button class="open-modal-btn">ASIA</button>
                 </div>
-                <div class="deal">
+                <div class="deal hidden">
                     <img class="open-modalbyImg" src="./img/europe.jpg">
                     <button class="open-modal-btn">Europe</button>
                 </div>
-                <div class="deal">
+                <div class="deal hidden">
                     <img class="open-modalbyImg" src="./img/usa.jpg">
                     <button class="open-modal-btn">Usa</button>
                 </div>
-                <div class="deal">
+                <div class="deal hidden">
                     <img class="open-modalbyImg" src="./img/oceania.jpg">
                     <button class="open-modal-btn">Oceania</button>
                 </div>
@@ -138,43 +167,43 @@
     </section>
     <div class="line"></div>
     <section id="contact">
-        <h1 class="title-page">Contact Form</h1>
-        <p class="c-p">Be inspired by our great travel packages and offers, Contact our travel Consultant <br> for inspirations, advice or get quote.</p>
+        <h1 class="title-page hidden">Contact Form</h1>
+        <p class="c-p hidden">Be inspired by our great travel packages and offers, Contact our travel Consultant <br> for inspirations, advice or get quote.</p>
         <div class="contact-con">
             <div class="contact">
                 <div class="contact-form">
                     <form id="contactForm" onsubmit="return sendMessage();">
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="fname">First Name<span>*</span></label>
                             <input type="text" id="fname" required>
                             <span class="error-message" id="fname-error">First name is required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="lname">Last Name<span>*</span></label>
                             <input type="text" id="lname" required>
                             <span class="error-message" id="lname-error">Last name is required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="email">Email<span>*</span></label>
                             <input type="email" id="email" required>
                             <span class="error-message" id="email-error">Email is required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="destination">Preferred Destination<span>*</span></label>
                             <input type="text" id="destination" required>
                             <span class="error-message" id="destination-error">Destination is required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="date">Your exact Travel Dates<span>*</span></label>
                             <input type="date" id="date" required>
                             <span class="error-message" id="date-error">Date is required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="num_people">Number of People Travelling<span>*</span></label>
                             <input type="number" id="num_people" required>
                             <span class="error-message" id="num_people-error">Number of people is required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="dropdown">How do you know Spectrum Travel and Tours Inc.<span>*</span></label>
                             <div class="custom-select">
                                 <select type="text" id="dropdown" required>
@@ -189,12 +218,12 @@
                                 <span class="error-message" id="dropdown-error">Selection is required.</span>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="remarks">Remarks<span>*</span></label>
                             <textarea type="text" id="remarks"></textarea>
                             <span class="error-message" id="remarks-error">Remarks are required.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <button type="submit">Submit</button>
                         </div>
                     </form>
@@ -202,17 +231,17 @@
                 
             </div>
             <div class="map">
-                <iframe
+                <iframe class="hidden"
                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.4671802537887!2d121.0540684654933!3d14.572434862880902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c97d52813eb9%3A0x61ef9700cd3e5424!2sspectrum+travel%26tours!5e0!3m2!1sen!2sph!4v1553731994708" width="600" height="300" frameborder="0" style="border:0" allowfullscreen>
                 </iframe>
                 <div class="address">
                     <div class="address-con">
-                        <h4>ADDRESS</h4>
-                        <p>132 Pioneer St., Highway Hills Mandaluyong City</p>
-                        <h4>PHONE</h4>
-                        <p>+632 (02) 8637 12 94<br></p>
-                        <h4>EMAIL</h4>
-                        <p>
+                        <h4 class="hidden">ADDRESS</h4>
+                        <p class="hidden">132 Pioneer St., Highway Hills Mandaluyong City</p>
+                        <h4 class="hidden">PHONE</h4>
+                        <p class="hidden">+632 (02) 8637 12 94<br></p>
+                        <h4 class="hidden">EMAIL</h4>
+                        <p class="hidden">
                             <a href="#">inquire@spectrumtraveltours.com.ph</a>
                         </p>
                         <Br/>
@@ -224,14 +253,14 @@
     <footer>
         <div class="con-footer">
             <div class="social2_wrapper">
-                <h2>Social Account</h2>
-                <ul class="social2">
+                <h2 class="hidden">Social Account</h2>
+                <ul class="social2 hidden">
                     <li class="nav1"><a href="https://www.facebook.com/Spectrum-Travel-Tours-Inc-1241520189328501/" target="_blank"></a></li>
                     <li class="nav3"><a href="https://www.instagram.com/spectrumtraveltours/" target="_blank"></a></li>
                 </ul>
             </div>
             <div class="sched">
-                <div class="support1">
+                <div class="support1 hidden">
                     Business Hours: Mondays to Thursdays - <br> 
                     8:00 A.M. to 5:30 P.M.  <br>
                     Fridays -  8:00 A.M. to 5:00 P.M.<br>
@@ -264,15 +293,29 @@
         });
 
         window.onscroll = function () {
-        if (window.scrollY > document.getElementById('header').offsetHeight) {
-            gotopbtn.classList.add('show');
-        } else {
-            gotopbtn.classList.remove('show');
-        }
-    };
+            if (window.scrollY > document.getElementById('header').offsetHeight) {
+                gotopbtn.classList.add('show');
+            } else {
+                gotopbtn.classList.remove('show');
+            }
+        };
+    </script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                console.log('Is in view:', entry.isIntersecting); // For debugging
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
 
     </script>
-
     <script>
         const imgGallery = document.querySelectorAll('.open-modalbyImg');
         const buttons = document.querySelectorAll('.open-modal-btn');

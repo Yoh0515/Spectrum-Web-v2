@@ -54,6 +54,26 @@
     }
 
     /* -----About ------ */
+
+    .con-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg h2 {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .our-com {
+        width: 400px;
+    }
+
+    .o-mission, .o-vission, .o-value {
+        width: 300px;
+    }
+
     .col-2_con {
         margin: 0;
     }
@@ -107,6 +127,11 @@
     }
 
     /* ==== Contact ===== */
+
+    .about-con {
+        padding: 40px 40px 0 40px;
+        text-align: center;
+    }
 
     .contact-con {
         display: block;
@@ -192,6 +217,27 @@
         flex-direction: column;
     }
 
+     /* -----About ------ */
+
+     .con-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg h2 {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .our-com {
+        width: 400px;
+    }
+
+    .o-mission, .o-vission, .o-value {
+        width: 300px;
+    }
+
     /* ==== Gallery ===== */
 
     .modal-con {
@@ -206,6 +252,34 @@
     .col-1 button {
         display: block;
         margin: 20px auto 0;
+    }
+
+
+    /* ==== About ===== */
+
+    .about-con {
+        padding: 40px 40px 0 40px;
+        text-align: center;
+    }
+
+    .con-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .our-com {
+        width: 400px;
+    }
+
+    .our-com img{
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .o-mission, .o-vission, .o-value {
+        width: 400px;
     }
 
 
@@ -277,6 +351,27 @@
         font-size: 25px;
         display: flex;
         flex-direction: column;
+    }
+
+     /* -----About ------ */
+
+     .con-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg h2 {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .our-com {
+        width: 550px;
+    }
+
+    .o-mission, .o-vission, .o-value {
+        width: 400px;
     }
 
     /* ==== Gallery ===== */

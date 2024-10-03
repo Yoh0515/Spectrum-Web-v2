@@ -14,6 +14,19 @@ html {
     padding-top: 1px;
 }
 
+.hidden{
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 #header{
     position: relative;
     width: 100%;
@@ -135,7 +148,7 @@ nav .fa-solid {
 /* -------------- About Us --------------- */
 
 .about-con {
-    padding: 50px 100px 0 100px;
+    padding: 40px 100px 0 100px;
     text-align: center;
 }
 
@@ -143,54 +156,162 @@ nav .fa-solid {
     font-size: 40px;
     color: #CC0101;
     text-align: center;
+    filter: drop-shadow(1px 1px 23px #CC0101 );
 }
 
 .con-1 {
-    margin-top: 30px;
+    margin: 40px;
+    justify-content: center;
+    display: flex;
+    gap: 60px;
+    align-items: center;
 }
 
-.con-1 h1{
-    font-size: 25px;
+.our-com {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 550px;
+    padding: 20px;
+    color: #000;
+    box-shadow: 4px 2px 19px 4px #ffd6d6;
+}
+
+.our-com h1{
+    padding-bottom: 15px;
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
 
-.con-1 p{
-    font-size: 20px;
-    margin-bottom: 30px;
+.our-com img{
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-.col-2 {
-    text-align: start;
-    margin-top: 30px;
+.our-all{
+    gap: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.col-2 h1 {
-    color: #CC0101;
-    font-size: 40px;
-    margin-bottom: 20px;
+.o-mission, .o-vission, .o-value {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 400px;
+    color: #000;
+    box-shadow: 4px 2px 19px 4px #ffd6d6;
+}
+
+.o-mission h1, .o-vission h1, .o-value h1 {
+    text-transform: uppercase;
+}
+
+/* --------- Why Us -------- */
+.col-2 {
+    background-image: url(../img/whyus_bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;  /* Image will cover the entire div */
+    background-position: center;
 }
 
 .col-2_con {
-    margin: 10px 0 0 90px;
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
 }
 
-.col-2 h2{
-    font-size: 30px;
-    text-align: start;
-    margin: 10px 0 0 90px;
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
-.col-2_con h3{
-    font-size: 20px;
+.bg {
+    background: rgba(204, 202, 202, 0.808);
+    padding: 40px 0  40px 0;
 }
 
-.col-2_con li{
-    font-size: 20px;
-    padding: 15px 0px 40px 50px;
+.bg h2 {
+    text-align: center;
+    width: 100%;
 }
+
+.why-div  {
+    text-align: center;
+    box-shadow: 10px 15px #ffc2c2;
+    padding: 20px 20px;
+    border-radius: 10px;
+    width: 250px;
+    background: #ffffff;
+}
+
+.why-div:hover {
+    background: #cc0101ab;
+    color: white;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+    transition:all 0.3s/* Make text white on hover */
+}
+
+.why-div:hover h3, 
+.why-div:hover p {
+    color: white; /* Ensure that both the heading and paragraph text turn white */
+}
+
+.why-div .oneImg, .why-div .twoImg {
+    transition: filter 0.3s ease; /* Smooth transition for the image */
+}
+
+.why-div:hover .oneImg, .why-div:hover .twoImg {
+    filter: drop-shadow(1px 1px 20px white); /* Change the image filter on hover */
+}
+
+.why-div .oneImg {
+    height: 60px;
+    width: 60px;
+    padding: 10px 0 10px 0;
+    filter: drop-shadow(1px 1px 20px #CC0101 );
+}
+
+.why-div .twoImg {
+    height: 40px;
+    width: 50px;
+    padding: 20px;
+    padding-bottom: 20px;
+    filter: drop-shadow(1px 1px 20px #CC0101 );
+}
+
+.why-con {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-con p {
+    font-size: 14px;
+}
+
+.why-con h3 {
+    font-size: 16px;
+}
+
 
 /* ---------- Services -------- */
 
@@ -262,8 +383,18 @@ nav .fa-solid {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding: 15px;
     cursor: pointer;
 }
+
+.deal:hover {
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    box-shadow: -1px -1px 86px 2px rgba(196, 1, 1) inset;
+    -webkit-box-shadow: -1px -1px 86px 2px rgba(196, 1, 1) inset;
+    -moz-box-shadow: -1px -1px 86px 2px rgba(196, 1, 1) inset;
+}
+
 
 .deal button {
     border: none;
@@ -273,6 +404,7 @@ nav .fa-solid {
     padding: 3px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
     text-transform: uppercase;
 }
 
@@ -284,6 +416,7 @@ nav .fa-solid {
 .deal img{
     height: 200px;
     width: 320px;
+    border-radius: 5px;
 }
 
 /* Modal styling */
@@ -309,10 +442,27 @@ nav .fa-solid {
               transform: scale3d(.3, .3, .3);
     }
   
-    50% {
+    100% {
+      opacity: 1;
+    }
+}
+  
+@keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+              transform: scale3d(.3, .3, .3);
+    }
+  
+    100% {
       opacity: 1;
     }
   }
+  
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
+}
 
 .modal-content {
     background-color: white;
@@ -343,6 +493,7 @@ nav .fa-solid {
     font-size: 15px;
     border: none;
     width: fit-content;
+    border-radius: 5px;
     padding: 5px 30px;
 }
 
@@ -363,7 +514,7 @@ nav .fa-solid {
     width: 300px;
     height: auto;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .close-btn {
@@ -508,6 +659,7 @@ span {
 .map {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
