@@ -531,9 +531,19 @@ nav .fa-solid {
 
 /* Footer */
 footer {
-    background-color: #CC0101;
-    padding-top: 1px;
     width: 100%;
+}
+
+.certifications {
+    margin: 70px 0;
+}
+
+.cert-con{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
   
 .con-footer {
@@ -559,6 +569,7 @@ footer {
     font-size: 15px;
     color:#fff;
     gap: 10px;
+    background: #CC0101;
 }
   
 span {
@@ -818,19 +829,16 @@ textarea {
   }
 
   
-/* General error message styling */
 .error-message {
     color: red;
-    display: none; /* Hide error messages by default */
+    display: none;
     font-size: 0.875em;
     margin-top: 4px;
 }
 
-/* Styling for fields with errors */
 .error {
     border: 1px solid red;
 }
-
 
 .gotopbtn {
     position: fixed;
