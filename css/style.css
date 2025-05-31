@@ -435,6 +435,49 @@ nav .fa-solid {
     animation: 0.4s ease-out zoomIn;
 }
 
+.carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+.carousel-images {
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-images img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  background-color: #ffffffcc;
+  border: none;
+  font-size: 15px;
+  padding: 2px 7px;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+
+
 @-webkit-keyframes zoomIn {
     0% {
       opacity: 0;
@@ -481,6 +524,7 @@ nav .fa-solid {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 350px;
 }
 
 .col-1 span{
