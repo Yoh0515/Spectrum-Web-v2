@@ -33,7 +33,7 @@
         </video>
         <div class="content hidden">
             <h1 class="hidden">Time for your <br> <span>next adventure</span></h1>
-            <h2 class="hidden">Let us plan it for you</h2>
+            <h2 class="hidden">We are here to get you</h2>
             <button><a class="hidden" href="#contact">START PLANNING YOUR TRIP</a></button>
         </div>
     </header>
@@ -431,7 +431,7 @@
             if (destination.toLowerCase() === 'europe') {
                 const europeImages = [
                     { 
-                        src: './img/Europe/australia.jpg', 
+                        src: './img/Europe/austria.jpg', 
                         title: 'Austria',
                         season:'Spring (Apr–May)',
                         desc: '"Austria is the heart of classical music and alpine charm. Its perfect for those who love culture, history, and scenic views. Must-see: Vienna'
@@ -569,7 +569,7 @@
                     imageElements.push(img);
                     titles.push(title);
                 });
-            } if (destination.toLowerCase() === 'asia') {
+            } else if (destination.toLowerCase() === 'asia') {
                 const asiaImages = [
                     { 
                         src: './img/Asia/dubai.jpg', 
@@ -616,6 +616,129 @@
                 ];
 
                 asiaImages.forEach(({ src, title,season,desc }) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = title;
+                    img.classList.add('carousel-img');
+                    img.dataset.season = season;
+                    img.dataset.desc = desc;
+                    carouselImagesContainer.appendChild(img);
+                    imageElements.push(img);
+                    titles.push(title);
+                });
+            } else if (destination.toLowerCase() === 'oceania') {
+                const oceaniaImages = [
+                    { 
+                        src: './img/Oceania/australia.jpg', 
+                        title: 'Australia',
+                        season:'Autumn (Mar–May), Winter (Jun–Aug)',
+                        desc: 'Australia is vast and diverse, offering exciting cities, iconic beaches, and unique wildlife. Must-see: Melbourne, Sydney'
+                    },
+                    { 
+                        src: './img/Oceania/new zealand.jpg', 
+                        title: 'New Zealand',
+                        season: 'Autumn to Early Winter (Mar–Jul)',
+                        desc: 'New Zealand is nature’s playground—full of mountains, lakes, and outdoor thrills. Must-see: Auckland, Queenstown'
+                    }
+                ];
+
+                oceaniaImages.forEach(({ src, title,season,desc }) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = title;
+                    img.classList.add('carousel-img');
+                    img.dataset.season = season;
+                    img.dataset.desc = desc;
+                    carouselImagesContainer.appendChild(img);
+                    imageElements.push(img);
+                    titles.push(title);
+                });
+            }  else if (destination.toLowerCase() === 'usa') {
+                const usaImages = [
+                    { 
+                        src: './img/USA/Brazil.jpg', 
+                        title: 'Brazil',
+                        season:'Late Summer (Feb–Mar)',
+                        desc: 'Brazil pulses with rhythm, color, and passion—famous for its beaches, Carnival, and natural beauty. Must-see: Rio de Janeiro'
+                    },
+                    { 
+                        src: './img/USA/peru.jpg', 
+                        title: 'Peru',
+                        season: 'Late Summer to Early Fall (Aug–Sep)',
+                        desc: 'Peru is a mystical land of ancient ruins and dramatic landscapes. Must-see: Machu Picchu'
+                    },
+                    { 
+                        src: './img/USA/USA.jpg', 
+                        title: 'USA',
+                        season: 'Spring (Mar–May), Summer (Jun–Aug), Early Fall (Sep)',
+                        desc: 'The USA is a land of variety—from buzzing cities to natural wonders, there’s something for every traveler. Must-see: New York, Chicago, Las Vegas, San Diego, San Francisco'
+                    },
+                ];
+
+                usaImages.forEach(({ src, title,season,desc }) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = title;
+                    img.classList.add('carousel-img');
+                    img.dataset.season = season;
+                    img.dataset.desc = desc;
+                    carouselImagesContainer.appendChild(img);
+                    imageElements.push(img);
+                    titles.push(title);
+                });
+            }  else if (destination.toLowerCase() === 'domestic') {
+                const domesticImages = [
+                    { 
+                        src: './img/Domestic/balesin.PNG', 
+                        title: 'Balesin Island',
+                        season:'Cool Dry to Peak Summer (Jan–May), Shoulder Season (Nov–Dec)',
+                        desc: 'Balesin Island is an exclusive tropical retreat with themed villages inspired by international destinations. Perfect for luxury travelers looking for privacy and elegance.'
+                    },
+                    { 
+                        src: './img/Domestic/boracay.jpg', 
+                        title: 'Boracay',
+                        season: 'Cool Dry to Peak Summer (Jan–May), Shoulder Season (June–Dec)',
+                        desc: 'Boracay is world-famous for its powdery white sands and vibrant island life. Whether youre after relaxing beach days or lively nightlife, Boracay has it all.'
+                    },
+                    { 
+                        src: './img/Domestic/coron.jpg', 
+                        title: 'Coron',
+                        season: 'Cool Dry to Early Summer (Jan–Jun), Shoulder Season (Nov–Dec)',
+                        desc: 'Coron is a diver’s paradise, known for its shipwrecks, turquoise lakes, and surreal underwater landscapes. A must-visit for adventure seekers and nature lovers.'
+                    },
+                    { 
+                        src: './img/Domestic/dumaguete.jpg', 
+                        title: 'Dumaguete',
+                        season:'Cool Dry to Early Rainy Season (Jan–Jun), Shoulder Season (Nov–Dec)',
+                        desc: 'Dumaguete offers a charming mix of heritage, oceanfront boulevards, and easy access to dive sites and marine sanctuaries. It’s peaceful, cultured, and full of hidden gems.'
+                    },
+                    { 
+                        src: './img/Domestic/el nido.jpg', 
+                        title: 'El Nido',
+                        season: 'Cool Dry to Early Summer (Jan–Jun), Shoulder Season (Nov–Dec)',
+                        desc: 'El Nido stuns with dramatic limestone cliffs, hidden lagoons, and crystal-clear waters. Its a top destination for island-hopping and unforgettable sunsets.'
+                    },
+                    { 
+                        src: './img/Domestic/iloilo.jpg', 
+                        title: 'Iloilo',
+                        season: 'Cool Dry to Early Summer (Jan–Jun), Shoulder Season (Nov–Dec)',
+                        desc: 'Iloilo charms with its mix of colonial heritage, delicious food, and easy access to nearby beaches and islands. A gateway to culture and coastal beauty in the Visayas.'
+                    },
+                    { 
+                        src: './img/Domestic/siargao.jpg', 
+                        title: 'Siargao',
+                        season: 'Dry Season & Surf Season (Mar–Jun, Sep–Nov)',
+                        desc: 'Siargao is the surfing capital of the Philippines, but its more than just waves. From lagoons to island-hopping to laid-back cafes, its a haven for soulful travelers.'
+                    },
+                    { 
+                        src: './img/Domestic/siquijor.jpg', 
+                        title: 'Siquijor',
+                        season: 'Cool Dry to Early Rainy Season (Jan–Jun), Shoulder Season (Nov–Dec)',
+                        desc: 'Siquijor, known for its mystic vibe, is full of waterfalls, white beaches, and serene nature. It’s the perfect escape if youre looking for peace and magic.'
+                    },
+                ];
+
+                domesticImages.forEach(({ src, title,season,desc }) => {
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = title;
