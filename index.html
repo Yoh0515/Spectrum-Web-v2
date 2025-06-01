@@ -569,6 +569,63 @@
                     imageElements.push(img);
                     titles.push(title);
                 });
+            } if (destination.toLowerCase() === 'asia') {
+                const asiaImages = [
+                    { 
+                        src: './img/Asia/dubai.jpg', 
+                        title: 'Dubai',
+                        season:'Winter (Dec–Mar), Peak: Feb',
+                        desc: '"The UAE is futuristic and luxurious, with a mix of desert landscapes and ultra-modern cities. Must-see: Dubai'
+                    },
+                    { 
+                        src: './img/Asia/indonesia.jpg', 
+                        title: 'Indonesia',
+                        season: 'Dry Season (Apr–Oct), Best Months (Jul–Sep)',
+                        desc: '"Indonesia offers natural wonders and spiritual culture, with island escapes and friendly locals. Must-see: Bali'
+                    },
+                    { 
+                        src: './img/Asia/japan.jpg', 
+                        title: 'Japan',
+                        season: 'Winter (Feb), Spring (Mar–Apr), Early Summer (May–Jun), Autumn (Sep–Nov)',
+                        desc: '"Japan blends tradition with innovation—offering peaceful temples, buzzing cities, and stunning nature. Must-see: Tokyo, Kyoto, Osaka, Sapporo, Fukuoka, Kansai'
+                    },
+                    { 
+                        src: './img/Asia/singapore.jpg', 
+                        title: 'Singapore',
+                        season: 'Spring (Mar–Apr), Dry Season (Feb–Apr)',
+                        desc:'"Singapore is clean, modern, and multicultural—a small country packed with flavor and innovation. Must-see: Singapore'
+                    },
+                    { 
+                        src: './img/Asia/south korea.jpg', 
+                        title: 'South Korea',
+                        season: 'Late Spring (May), Early Summer (Jun), Fall (Sep–Oct)',
+                        desc: '"South Korea is dynamic and trendsetting, combining ancient palaces with K-culture and street food. Must-see: Seoul'
+                    },
+                    { 
+                        src: './img/Asia/thailand.jpg', 
+                        title: 'Thailand',
+                        season: 'Cool Season (Nov–Feb), Peak Summer (Jul - hot but touristy)',
+                        desc: 'Thailand is warm, welcoming, and full of life—from golden temples to tropical islands. Must-see: Bangkok' 
+                    },
+                    { 
+                        src: './img/Asia/vietnam.jpg', 
+                        title: 'Vietnam',
+                        season: 'Spring (Mar–Apr), Fall (Sep–Nov)',
+                        desc: 'Vietnam is rich in history, flavors, and scenic beauty—perfect for cultural immersion and adventure.Must-see: Hanoi, Ho Chi Minh, Hoi An'
+                    }
+                ];
+
+                asiaImages.forEach(({ src, title,season,desc }) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = title;
+                    img.classList.add('carousel-img');
+                    img.dataset.season = season;
+                    img.dataset.desc = desc;
+                    carouselImagesContainer.appendChild(img);
+                    imageElements.push(img);
+                    titles.push(title);
+                });
             } else {
                 const deals = document.querySelectorAll('.deal');
                 deals.forEach(deal => {
@@ -589,16 +646,19 @@
 
         // Display the current image by index
         const showImageAt = (index) => {
-            const offset = index * 400; // 500 is the width of each image
+            const image = imageElements[index];
+            const offset = image.offsetLeft;
+
             carouselImagesContainer.style.transform = `translateX(-${offset}px)`;
 
             modalTitle.textContent = titles[index];
-            modalSeason.textContent = imageElements[index].dataset.season || 'Best season to visit';
-            modalDesc.textContent = imageElements[index].dataset.desc || 'Description not available';
+            modalSeason.textContent = image.dataset.season || 'Best season to visit';
+            modalDesc.textContent = image.dataset.desc || 'Description not available';
 
             currentIndex = index;
             modal.style.display = 'flex';
         };
+
 
         // Handle opening modal from a deal element
         const openModal = (dealDiv) => {
