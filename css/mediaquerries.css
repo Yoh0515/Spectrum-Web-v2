@@ -228,7 +228,7 @@
         cursor: pointer;
     }
 
-    nav .fa-solid.fa-xmark {
+    nav .fa-solid.xmark {
         display: block;
         color: #fff;
         margin: 10px;
@@ -364,7 +364,7 @@
         cursor: pointer;
     }
 
-    nav .fa-solid.fa-xmark {
+    nav .fa-solid.xmark {
         display: block;
         color: #fff;
         margin: 10px;

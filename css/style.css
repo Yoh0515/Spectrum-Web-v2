@@ -61,6 +61,8 @@ nav img {
 
 nav .fa-solid {
     display: none;
+    width: 30px;
+    height: 30px;
 }
 
 .nav-links ul {
@@ -436,45 +438,33 @@ nav .fa-solid {
 }
 
 .carousel-wrapper {
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  height: 300px;
-  width: 290px;
-  object-fit: cover;
+    position: relative; 
+    overflow: hidden;   
+    align-items: center;
+    display: flex;
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
 }
 
 .carousel-images {
     transition: transform 0.5s ease;
-    display: flex;
-    width: 270px;
-    height: 300px;   /* maintain aspect ratio or use object-fit */
+    display: flex; 
+    height: 300px;
+    width: auto;
     object-fit: cover;
     
 }
 
-.carousel-images img {
-    width: 270px;
-    height: 200px;
-}
-
 .carousel-btn {
-  background-color: #ffffffcc;
-  border: none;
-  font-size: 15px;
-  justify-content: center;
-  padding: 1px;
-  display: flex;
-  cursor: pointer;
-  z-index: 1000;
+    top: 50%;             
+    background-color: #ffffffcc;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
 }
-
-.carousel-btn.prev {
-}
-
-.carousel-btn.next {
-}
-
 
 
 
@@ -517,15 +507,15 @@ nav .fa-solid {
 .modal-con {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    gap: 15px;
+    padding: 15px;
 }
 
 .col-1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 350px;
+    width: 300px;
 }
 
 .col-1 span{
@@ -555,21 +545,20 @@ nav .fa-solid {
 }
 
 .modal-content img {
-    width: 300px;
     height: auto;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    width: 300px;
 }
 
-.close-btn {
-    color: #CC0101;
-    border: none;
-    padding: 3px 10px;
-    background: none;
-    width: 100%;
-    font-size: 20px;
+.xmark-div {
+    display: flex;
+    justify-content: end;
+    margin: 15px;
+}
+
+div .modal-xmark {
+    width: 32px;
+    height: 32px;
     cursor: pointer;
-    text-align: end;
 }
 
 
@@ -901,4 +890,9 @@ textarea {
 
 .gotopbtn.show {
     display: block; /* Show the button when scrolled past header */
+}
+
+.arrow-up {
+    width: 30px;
+    height: 50px;
 }
