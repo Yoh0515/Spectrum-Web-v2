@@ -137,6 +137,8 @@ const startPlanningBtn = document.querySelector('#modal .col-1 button');
 const carouselImagesContainer = document.querySelector('.carousel-images');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn2 = document.querySelector('.btn-prev');
+const nextBtn2 = document.querySelector('.btn-next');
 
 let currentIndex = 0;
 let imageElements = [];
@@ -541,6 +543,16 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex + 1) % imageElements.length;
+    showImageAt(newIndex);
+});
+
+prevBtn2.addEventListener('click', () => {
+    const newIndex = (currentIndex - 1 + imageElements.length) % imageElements.length;
+    showImageAt(newIndex);
+});
+
+nextBtn2.addEventListener('click', () => {
     const newIndex = (currentIndex + 1) % imageElements.length;
     showImageAt(newIndex);
 });

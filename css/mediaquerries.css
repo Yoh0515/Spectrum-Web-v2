@@ -1,8 +1,34 @@
 
 @media (max-width: 576px) { 
+    /* Modal */
+    .carousel-controls{
+        display: flex;
+    }
+    .carousel-wrapper {
+        width: 180px;
+        height: 240px;
+    }
+
+    .carousel-images {
+        height: 180px;
+    }
+
+    .carousel-btn {
+        display: none;
+        font-size: 14px;
+        padding: 5px;
+    }
 
     .nav-links ul li {
         display: block;
+    }
+
+    .xmark-div {
+        margin: 7px;
+    }
+
+    .modal-con {
+        padding: 7px;
     }
 
     .nav-links {
@@ -205,6 +231,25 @@
 
 
 @media (max-width: 768px) { 
+    /* Modal */
+    .carousel-controls{
+        display: flex;
+    }
+    .carousel-wrapper {
+        width: 220px;
+        height: 280px;
+    }
+
+    .carousel-images {
+        height: 220px;
+    }
+
+    .carousel-btn {
+        display: none;
+        font-size: 16px;
+        padding: 6px;
+    }
+
     .nav-links ul li {
         display: block;
     }
@@ -341,6 +386,26 @@
 
 
 @media (max-width: 992px) { 
+    /* Modal */
+    .carousel-controls{
+        display: flex;
+    }
+
+    .carousel-wrapper {
+        width: 250px;
+        height: 300px;
+    }
+
+    .carousel-images {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        display: none;
+        font-size: 18px;
+        padding: 8px;
+    }
+
     .nav-links ul li {
         display: block;
     }

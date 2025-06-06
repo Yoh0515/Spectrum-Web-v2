@@ -16,7 +16,7 @@
         <nav>
             <a href="#header"><img src="./img/logo.png"></a>
             <div class="nav-links hidden" id="navLinks">
-                <img src="./img/icons/xmark.svg" class="fa-solid xmark" onclick="hideMenu()">
+                <img src="./img/icons/menu-xmark.svg" class="fa-solid xmark" onclick="hideMenu()">
                 <ul id="ulLink">
                     <li class="ulLink"><a href="#header">Home</a></li>
                     <li class="ulLink"><a href="#about">About Us</a></li>
@@ -25,7 +25,7 @@
                     <li class="ulLink"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <img onclick="hideMenu()" src="./img/icons/menu.svg" class="fa-solid menu" >
+            <img onclick="showMenu()" src="./img/icons/menu.svg" class="fa-solid menu" >
         </nav>
         <video autoplay muted loop id="myVideo">
             <source src="./video/paris.mp4" type="video/mp4">
@@ -158,8 +158,11 @@
                     <div class="carousel-wrapper">
                         <div class="carousel-images"></div>
                     </div>
-                    <button class="carousel-btn next">&#10095;</button>
-
+                    <button id="btn-main" class="carousel-btn next">&#10095;</button>
+                    <div class="carousel-controls">
+                        <button class="btn-prev">&#10094;</button>
+                        <button class="btn-next">&#10095;</button>
+                    </div>
                     <!-- Modal Text Content -->
                     <div class="col-1">
                         <h1 id="modal-title">Title</h1>
