@@ -1,12 +1,8 @@
 function sendMessage() {
-    // Initialize emailjs
     emailjs.init("19YZt0cTuvdX5zQfh");
 
-    // Validation function
     function validateForm() {
         let isValid = true;
-
-        // List of input fields and their corresponding error messages
         const fields = [
             { id: 'fname', errorId: 'fname-error' },
             { id: 'lname', errorId: 'lname-error' },
@@ -23,11 +19,11 @@ function sendMessage() {
             const errorSpan = document.querySelector(`#${field.errorId}`);
             if (input.value.trim() === '' || (input.id === 'dropdown' && input.value === '')) {
                 isValid = false;
-                errorSpan.style.display = "inline"; // Show error message
-                input.classList.add('error'); // Add error class
+                errorSpan.style.display = "inline"; 
+                input.classList.add('error'); 
             } else {
-                errorSpan.style.display = "none"; // Hide error message
-                input.classList.remove('error'); // Remove error class
+                errorSpan.style.display = "none"; 
+                input.classList.remove('error'); 
             }
         });
 
@@ -35,9 +31,8 @@ function sendMessage() {
     }
 
     if (!validateForm()) {
-        // Stop if form is invalid
         console.log('Form is invalid. Please check all required fields.');
-        return false; // Prevent form submission
+        return false; 
     }
 
     var serviceID = "service_p8kl3ki";
@@ -76,11 +71,11 @@ function sendMessage() {
 
     })
     .catch(error => {
-        console.error('Error:', error); // Log the error for debugging
+        console.error('Error:', error); 
         alert('Sorry, something went wrong. Please try again later.');
     });
 
-    return false; // Prevent default form submission
+    return false; 
 }
 
 //For Navlinks
@@ -112,7 +107,7 @@ window.onscroll = function () {
 //For scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        console.log('Is in view:', entry.isIntersecting); // For debugging
+        console.log('Is in view:', entry.isIntersecting); 
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
@@ -572,3 +567,24 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
+
+//For Cookies
+let cookieModal = document.querySelector(".cookie-modal");
+let cancelCookieBtn = document.querySelector(".btn.cancel");
+let acceptCookieBtn = document.querySelector(".btn.accept");
+
+cancelCookieBtn.addEventListener("click", function(){
+    cookieModal.classList.remove("active");
+})
+
+acceptCookieBtn.addEventListener("click", function(){
+    cookieModal.classList.remove("active");
+    localStorage.setItem("cookieAccepted", "yes")
+})
+
+setTimeout(function(){
+    let cookieAccepted =localStorage.getItem("cookieAccepted")
+    if (cookieAccepted != "yes"){
+        cookieModal.classList.add("active");
+    }
+}, 2000)
