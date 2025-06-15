@@ -290,7 +290,7 @@ const setupCarousel = (destination) => {
         const asiaImages = [
             { 
                 src: './img/Asia/dubai.jpg', 
-                title: 'Dubai',
+                title: 'UAE',
                 season:'Winter (Dec–Mar), Peak: Feb',
                 desc: '"The UAE is futuristic and luxurious, with a mix of desert landscapes and ultra-modern cities. Must-see: Dubai'
             },
@@ -370,7 +370,35 @@ const setupCarousel = (destination) => {
             imageElements.push(img);
             titles.push(title);
         });
-    }  else if (destination.toLowerCase() === 'usa') {
+    } else if (destination.toLowerCase() === 'africa') {
+        const oceaniaImages = [
+            { 
+                src: './img/Africa/morocco.jpg', 
+                title: 'Morocco',
+                season:'Spring (Mar–Apr), Early Fall (Sep–Oct)',
+                desc: 'Morocco is colorful and exotic, offering souks, deserts, and centuries of culture. Must-see: Marrakech, Fez'
+            },
+            { 
+                src: './img/Africa/south africa.jpg', 
+                title: 'South Africa',
+                season: 'Late Autumn to Mid-Winter (May–Jul)',
+                desc: 'South Africa is wild and wonderful—perfect for safaris, coastlines, and cultural diversity. Must-see: Cape Town, Johannesburg'
+            }
+        ];
+
+        oceaniaImages.forEach(({ src, title,season,desc }) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = title;
+            img.classList.add('carousel-img');
+            img.dataset.season = season;
+            img.dataset.desc = desc;
+            carouselImagesContainer.appendChild(img);
+            imageElements.push(img);
+            titles.push(title);
+        });
+    }
+      else if (destination.toLowerCase() === 'america') {
         const usaImages = [
             { 
                 src: './img/USA/Brazil.jpg', 
